@@ -110,7 +110,7 @@ class FlutterBugly {
     });
     // This captures errors reported by the Flutter framework.
     FlutterError.onError = (details) {
-      Zone.current.handleUncaughtError(details.exception, details.stack!);
+      Zone.current.handleUncaughtError(details.exception, details.stack);
     };
   }
 

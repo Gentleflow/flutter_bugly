@@ -61,7 +61,7 @@ class FlutterBugly {
 
   ///设置关键数据，随崩溃信息上报
   static Future<Null> putUserData(
-      {required String key, required String value}) async {
+      {String key, String value}) async {
     assert(key.isNotEmpty);
     assert(value.isNotEmpty);
     Map<String, Object> map = {
@@ -162,7 +162,7 @@ class FlutterBugly {
   ///Android 错误分析=>跟踪数据=>extraMessage.txt
   ///iOS 错误分析=>跟踪数据=>crash_attach.log
   static Future<Null> uploadException(
-      {required String message, required String detail, Map data}) async {
+      {String message, String detail, Map data}) async {
     var map = {};
     map.putIfAbsent("crash_message", () => message);
     map.putIfAbsent("crash_detail", () => detail);
